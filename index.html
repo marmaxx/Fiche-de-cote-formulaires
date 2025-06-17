@@ -1,24 +1,341 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Formulaire Contact</title>
+    <meta charset="UTF-8" />
+    <title>Formulaire PS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        td, th {
+            border: 1px solid #ccc;
+            padding: 12px;
+            vertical-align: top;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="file"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 95%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 98%;
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        input[type="radio"] {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        h3, h4 {
+            color: #444;
+        }
+
+        button[type="submit"] {
+            padding: 12px 24px;
+            background-color: rgb(2, 75, 184);
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-  <h1>Contactez-nous</h1>
-  <form action="https://formsubmit.co/ton.email@example.com" method="POST">
-    <label>Nom :</label><br />
-    <input type="text" name="nom" required /><br /><br />
+    <h1 style="text-align: center;">Demande de devis - Porte sectionnelle industrielle</h1>
+    <form action="https://formsubmit.co/mariusfil0d0@gmail.com" method="POST">
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="date">Date : </label>
+                    <input type="date" id="date" name="date" required /><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="commercial">Commercial :</label>
+                    <input type="text" id="commercial" name="commercial" required /><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">
+                    <label for="client">Client / Prospect :</label>
+                    <input type="text" id="client" name="client" required/><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="adresse-chantier">Adresse chantier : </label>
+                    <input type="text" id="adresse-chantier" name="adresse-chantier" required/><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">
+                    <label for="contact">Contact (Nom + n° de téléphone) :</label>
+                    <input type="text" id="contact" name="adresse-chantier" required/><br /><br />
+                </td>
+                <td colspan="3" style="text-align: center;">
+                    <label for="rampe">Rampe d'accès : </label>
+                    <label for="rampe1">Oui</label>
+                    <input type="radio" id="rampe1" name="choix" value="Oui">
+                    <label for="rampe2">Non</label>
+                    <input type="radio" id="rampe2" name="choix" value="Non"><br /><br />
+                    <label for="rampe">Accès remarque/semi : </label>
+                    <label for="remorque1">Oui</label>
+                    <input type="radio" id="remorque1" name="choix" value="Oui">
+                    <label for="remorque2">Non</label>
+                    <input type="radio" id="remorque2" name="choix" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="objet">Objet du devis :</label><br />
+                    <textarea name="objet" required rows="10" cols="100"></textarea><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="date-travaux">Date travaux souhaitée :</label>
+                    <input type="date" id="date-travaux">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="localisation">Localisation (joindre photo plan avec) :</label>
+                    <input type="file" id="localisation">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="spe-horaires">Spécificités horaires :</label>
+                    <input type="text" id="spe-horaires">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="spe-environnement">Spécificités environnement (ambiance, température, sécurité) :</label>
+                    <input type="text" id="spe-environnement">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <img src="vue-int.png" alt="Vue intérieure" width="500px">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="hsp">Hauteur sous plafond :</label>
+                    <input type="number" id="hsp"><br />
+                    <label for="hscl">Hauteur sous contre linteau :</label>
+                    <input type="number" id="hscl"><br />
+                    <label for="support">Support :</label>
+                    <input type="text" id="support">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align: center;">
+                    <label for="levee">Système de levée :</label>
+                    <select id="levee" name="levee">
+                        <option value="std">Levée standard</option>
+                        <option value="haute">Levée haute</option>
+                        <option value="verticale">Levée verticale</option>
+                        <option value="reduit">Linteau réduit</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="1" style="text-align: center;">
+                    <label for="pente">Levée sous pente (en ° ou %) :</label>
+                    <input type="text" id="pente" name="pente"><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="type-porte">Type de porte :</label>
+                    <select id="type-porte" name="type-porte">
+                        <option value="ps-80">PS en 80mm</option>
+                        <option valuen="ps-T">PS en T</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="mecanisme">Type de mécanisme :</label>
+                    <select id="mecanisme" name="mecanisme">
+                        <option value="man-corde">Manuelle - à corde</option>
+                        <option value="man-chaine">Manuelle - treuil à chaine</option>
+                        <option value="moteur">Motorisé (homme mort)</option>
+                        <option value="auto">Automatique</option>
+                    </select><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="tension">Tension du moteur (si choisi) :</label>
+                    <select id="tension" name="tension">
+                        <option value="230">230 V</option>
+                        <option value="400">400 V</option>
+                    </select>
 
-    <label>Email :</label><br />
-    <input type="email" name="email" required /><br /><br />
+                    <label for="emplacement-moteur">Emplacement du moteur (si choisi) :</label>
+                    <select id="emplacement-moteur" name="emplacement-moteur">
+                        <option value="gauche">à gauche </option>
+                        <option value="droite">à droite</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="activation">Système d'activation (si auto) :</label>
+                    <input type="text" id="activation" name="activation"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <img src="couleurs.png" alt="couleurs" width="500px">
+                    <p>Pour les PS en 80 mm RAL dispos sans plus value : 9002/9006/7016</p>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="color-int"> Face intérieure (≠ 9002): </label>
+                    <select id="color-int" name="color-int">
+                        <option value="1021">1021</option>
+                        <option value="3000">3000</option>
+                        <option value="5010">5010</option>
+                        <option value="6009">6009</option>
+                        <option value="7016">7016</option>
+                        <option value="8014">8014</option>
 
-    <label>Message :</label><br />
-    <textarea name="message" required></textarea><br /><br />
+                        <option value="1015">1015</option>
+                        <option value="5003">5003</option>
+                        <option value="6005">6005</option>
+                        <option value="7021">7021</option>
+                        <option value="7022">7022</option>
+                        <option value="7035">7035</option>
 
-    <input type="hidden" name="_captcha" value="false" />
+                        <option value="9006">9006</option>
+                        <option value="9007">9007</option>
+                        <option value="9005">9005</option>
+                        <option value="9010">9010</option>
+                        <option value="9001">9001</option>
+                    </select><br /><br />
 
-    <button type="submit">Envoyer</button>
-  </form>
+                    <label for="color-int"> Face extérieure : </label>
+                    <select id="color-int" name="color-int">
+                        <option value="1021">1021</option>
+                        <option value="3000">3000</option>
+                        <option value="5010">5010</option>
+                        <option value="6009">6009</option>
+                        <option value="7016">7016</option>
+                        <option value="8014">8014</option>
+
+                        <option value="1015">1015</option>
+                        <option value="5003">5003</option>
+                        <option value="6005">6005</option>
+                        <option value="7021">7021</option>
+                        <option value="7022">7022</option>
+                        <option value="7035">7035</option>
+                        
+                        <option value="9002">9002</option>
+                        <option value="9006">9006</option>
+                        <option value="9007">9007</option>
+                        <option value="9005">9005</option>
+                        <option value="9010">9010</option>
+                        <option value="9001">9001</option>
+                    </select><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <h3>Les options :</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Sections vitrées</h4>
+                    <label for="nombre">Nombre :</label>
+                    <input type="text" id="nombre"><br />
+                    <label for="section">Section :</label>
+                    <input type="text" id="section">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Rangée de hublots</h4>
+                    <label for="nombre">Nombre :</label>
+                    <input type="text" id="nombre"><br />
+                    <label for="section">Section :</label>
+                    <input type="text" id="section"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Portillon intégré</h4>
+                    <label for="serrure">Type de serrure :</label>
+                    <select id="serrure" name="serrure">
+                        <option value="1-pts">Serrure 1 pts</option>
+                        <option value="3-pts">Serrure 3 pts</option>
+                        <option value="anti-panique">Serrure anti-panique</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="emplacement-portillon">Emplacement du portillon :</label>
+                    <select id="emplacement-portillon" name="emplacement-portillon">
+                        <option value="poussant-gauche">Poussant gauche</option>
+                        <option value="poussant-droite">Poussant droit</option>
+                    </select><br /><br />
+                </td>
+            </tr>
+            <tr> 
+                <td colspan="4" style="text-align: center;">
+                    <label for="observations">Autres / Observations :</label><br />
+                    <textarea id="observations" name="observations" rows="10" cols="100"></textarea><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <input type="hidden" name="_captcha" value="false" />
+                    <button type="submit">Envoyer</button>
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
