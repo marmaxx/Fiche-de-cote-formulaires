@@ -147,6 +147,23 @@
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
+                    <label for="depose">Système de levée :</label>
+                    <select id="depose" name="Type de dépose">
+                        <option value="Neuf">Neuf</option>
+                        <option value="Dépose avec soin">Dépose avec soin</option>
+                        <option value="Dépose + Evacuation">Dépose + Evacuation</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="asserv">Asservissement avec un autre équipement :</label>
+                    <label for="asserv1">Oui</label>
+                    <input type="radio" id="asserv1" name="Oui" value="Oui">
+                    <label for="asserv2">Non</label>
+                    <input type="radio" id="asserv2" name="Non" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
                     <label for="date-travaux">Date travaux souhaitée :</label>
                     <input type="date" id="date-travaux" name="Date travaux">
                 </td>
@@ -306,8 +323,12 @@
                 </td>
             </tr>
             <tr>
+                <td colspan="4" style="text-align: center;">
+                    <h3> Portillon intégré </h3>
+                </td>
+            </tr>
+            <tr>
                 <td colspan="2" style="text-align: center;">
-                    <h4>Portillon intégré</h4>
                     <label for="serrure">Type de serrure :</label>
                     <select id="serrure" name="Type de serrure">
                         <option value="Serrure 1 pts">Serrure 1 pts</option>
@@ -321,6 +342,34 @@
                         <option value="Poussant gauche">Poussant gauche</option>
                         <option value="Poussant droite">Poussant droit</option>
                     </select><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Intérieur</h4>
+                    <label>Béquille : </label>
+                    <label for="bequille1">Oui</label>
+                    <input type="radio" id="bequille1" name="Oui" value="Oui">
+                    <label for="bequille2">Non</label>
+                    <input type="radio" id="bequille2" name="Non" value="Non"><br /><br />
+                    <label>BAP : </label>
+                    <label for="bap1">Oui</label>
+                    <input type="radio" id="bap1" name="Oui" value="Oui">
+                    <label for="bap2">Non</label>
+                    <input type="radio" id="bap2" name="Non" value="Non"><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Extérieur</h4>
+                    <label>Béquille : </label>
+                    <label for="bequille3">Oui</label>
+                    <input type="radio" id="bequille3" name="Oui" value="Oui">
+                    <label for="bequille4">Non</label>
+                    <input type="radio" id="bequille4" name="Non" value="Non"><br /><br />
+                    <label>Poignée fixe : </label>
+                    <label for="poignee1">Oui</label>
+                    <input type="radio" id="poignee1" name="Oui" value="Oui">
+                    <label for="poignee2">Non</label>
+                    <input type="radio" id="poignne2" name="Non" value="Non"><br /><br />
                 </td>
             </tr>
             <tr> 
