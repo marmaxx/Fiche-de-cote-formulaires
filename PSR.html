@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <title>Formulaire PS</title>
+    <title>Formulaire PSR</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -126,12 +126,7 @@
                     <label for="contact">Contact (Nom + n° de téléphone) :</label>
                     <input type="text" id="contact" name="Contact" required/><br /><br />
                 </td>
-                <td colspan="2" style="text-align: center;">
-                    <label for="rampe">Rampe d'accès : </label>
-                    <label for="rampe1">Oui</label>
-                    <input type="radio" id="rampe1" name="Rampe d'accès" value="Oui">
-                    <label for="rampe2">Non</label>
-                    <input type="radio" id="rampe2" name="Rampe d'accès" value="Non"><br /><br />
+                <td colspan="3" style="text-align: center;">
                     <label for="rampe">Accès remarque/semi : </label>
                     <label for="remorque1">Oui</label>
                     <input type="radio" id="remorque1" name="Accès remorque" value="Oui">
@@ -155,31 +150,8 @@
                     </select><br /><br />
                 </td>
                 <td colspan="2" style="text-align: center;">
-                    <label for="asserv">Asservissement avec un autre équipement :</label>
-                    <label for="asserv1">Oui</label>
-                    <input type="radio" id="asserv1" name="Asservissement avec un autre équipement" value="Oui">
-                    <label for="asserv2">Non</label>
-                    <input type="radio" id="asserv2" name="Asservissement avec un autre équipement" value="Non"><br /><br />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align: center;">
                     <label for="date-travaux">Date travaux souhaitée :</label>
                     <input type="date" id="date-travaux" name="Date travaux">
-                </td>
-                <td colspan="2" style="text-align: center;">
-                    <label for="localisation">Localisation (joindre photo plan avec) :</label>
-                    <input type="file" id="localisation" name="Localisation">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align: center;">
-                    <label for="spe-horaires">Spécificités horaires :</label>
-                    <input type="text" id="spe-horaires" name="Spécificités horaires">
-                </td>
-                <td colspan="2" style="text-align: center;">
-                    <label for="spe-environnement">Spécificités environnement (ambiance, température, sécurité) :</label>
-                    <input type="text" id="spe-environnement" name="Spécificités environnement">
                 </td>
             </tr>
             <tr>
@@ -196,115 +168,96 @@
                     <input type="number" id="hauteur" name="Hauteur de la porte" required><br />
                     <label for="hsp">Hauteur sous plafond :</label>
                     <input type="number" id="hsp" name="Hauteur sous plafond" required><br />
-                    <label for="ld">Linteau disponible :</label>
-                    <input type="number" id="ld" name="Linteau disponible"><br />
-                    
                 </td>
             </tr>
             <tr>
-                <td colspan="1" style="text-align: center;">
+                <td colspan="2" style="text-align: center;">
                     <label for="levee">Système de levée :</label>
                     <select id="levee" name="Système de levée" required>
-                        <option value="Standard">Levée standard</option>
-                        <option value="Haute">Levée haute</option>
-                        <option value="Verticale">Levée verticale</option>
-                        <option value="Linteau Réduit">Linteau réduit</option>
+                        <option value="Standard G200">Standard G200</option>
+                        <option value="G160">G160</option>
+                        <option value="G100">G100</option>
+                        <option value="Linteau Réduit R60">Linteau réduit R60</option>
                     </select><br /><br />
                 </td>
-                <td colspan="1" style="text-align: center;">
-                    <label for="pente">Levée sous pente (en ° ou %) :</label>
-                    <input type="text" id="pente" name="Levée sous pente"><br /><br />
+                <td colspan="2" style="text-align: center;">
+                    <label for="type-verrouillage">Type de verrouillage :</label>
+                    <select id="type-verrouillage" name="Type de verrouillage" required>
+                        <option value="Verrou" selected>Verrou</option>
+                        <option value="Serrure">Serrure</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="mecanisme">Type de mécanisme :</label>
+                    <select id="mecanisme" name="Type de mécanisme" required>
+                        <option value="--">-- Choisissez un mécanisme --</option>
+                        <option value="Motorisé" selected>Motorisé</option>
+                        <option value="Manuelle">Manuelle</option>
+                    </select><br /><br />
                 </td>
                 <td colspan="2" style="text-align: center;">
-                    <label for="type-porte">Type de porte :</label>
-                    <select id="type-porte" name="Type de porte" required>
-                        <option value="PS en 40mm" selected>PS en 40mm</option>
-                        <option value="PS en 80mm">PS en 80mm</option>
-                        <option valuen="PS en T">PS en T</option>
-                    </select>
+                    <label>Débrayage extérieur : </label><br />
+                    <label for="debrayage-ext-1"> Oui</label>
+                    <input type="radio" id="debrayage-ext-1" name="debrayage-ext">
+                    <label for="debrayage-ext-2"> Non</label>
+                    <input type="radio" id="debrayage-ext-2" name="debrayage-ext">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="telecommandes">Nombre de télécommandes :</label>
+                    <input type="number" id="telecommandes" name="Nombre de télécommandes" required min="0">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="canaux">Nombre de canaux :</label>
+                    <select id="canaux" name="Nombre de canaux">
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                    </select><br /><br />
                 </td>
             </tr>
             <tr>
                 <td colspan="4" style="text-align: center;">
-                    <label for="mecanisme">Type de mécanisme :</label>
-                    <select id="mecanisme" name="Type de mécanisme" required>
-                        <option value="Motorisé (homme mort)" selected>Motorisé (homme mort)</option>
-                        <option value="A corde ">Manuelle - à corde</option>
-                        <option value="Treuil à chaine">Manuelle - treuil à chaine</option>
-                        <option value="Automatique">Automatique</option>
-                    </select><br /><br />
+                    <label for="finition">Finition de la porte : </label>
+                    <select id="finition" name="Finition de la porte">
+                        <option value="Woodgrain">Woodgrain</option>
+                        <option value="Stucco">Stucco</option>
+                        <option value="Satin">Satin</option>
+                        <option value="Wood">Wood</option>
+                        <option value="Antra">Antra</option>
+                        <option value="Quartz">Quartz</option>
+                        <option value="Granite">Granite</option>
+                    </select>
                 </td>
             </tr>
-            <tr>
-                <td colspan="2" style="text-align: center;">
-                    <label for="tension">Tension du moteur (si choisi) :</label>
-                    <select id="tension" name="Tension du moteur (si choisi)" required>
-                        <option value="400" selected>400 V</option>
-                        <option value="230">230 V</option>
+            <tr id="motif">
+                <td colspan="4" style="text-align: center;">
+                    <label for="motif-select">Motif :</label>
+                    <select id="motif-select" name="Motif">
+                        <option value="Plano">Plano</option>
+                        <option value="Ligna">Ligna</option>
+                        <option value="Plancha">Plancha</option>
+                        <option value="Cassetta">Cassetta</option>
                     </select>
-
-                    <label for="emplacement-moteur">Emplacement du moteur (si choisi) :</label>
-                    <select id="emplacement-moteur" name="Emplacement du moteur (si choisi)">
-                        <option value="gauche">à gauche </option>
-                        <option value="droite">à droite</option>
-                    </select><br /><br />
-                </td>
-                <td colspan="2" style="text-align: center;">
-                    <label for="activation">Système d'activation (si auto) :</label>
-                    <input type="text" id="activation" name="Système d'activation (si auto)"><br /><br />
                 </td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
                     <img src="couleurs.png" alt="couleurs" width="500px">
-                    <p>Pour les PS en 80 mm RAL dispos sans plus value : 9002/9006/7016</p>
+                    <img src="9016.png" alt="couleur 9016" width="100px">
                 </td>
                 <td colspan="2" style="text-align: center;">
                     <label for="color-ext"> Face extérieure : </label>
                     <select id="color-ext" name="Couleur face extérieure" required>
-                        <option value="1021">1021</option>
-                        <option value="3000">3000</option>
-                        <option value="5010">5010</option>
-                        <option value="6009">6009</option>
-                        <option value="7016">7016</option>
-                        <option value="8014">8014</option>
-
-                        <option value="1015">1015</option>
-                        <option value="5003">5003</option>
-                        <option value="6005">6005</option>
-                        <option value="7021">7021</option>
-                        <option value="7022">7022</option>
-                        <option value="7035">7035</option>
-                        
-                        <option value="9002">9002</option>
-                        <option value="9006">9006</option>
-                        <option value="9007">9007</option>
-                        <option value="9005">9005</option>
-                        <option value="9010">9010</option>
-                        <option value="9001">9001</option>
+                        <option value="1021">9016</option>
+                        <option value="3000">7016</option>
                     </select><br /><br />
-                    <label for="color-int"> Face intérieure (si différent du RAL 9002): </label>
+                    <label for="color-int"> Face intérieure : </label>
                     <select id="color-int" name="Couleur face intérieure" required>
-                        <option value="9002" selected>9002</option>
-                        <option value="1021">1021</option>
-                        <option value="3000">3000</option>
-                        <option value="5010">5010</option>
-                        <option value="6009">6009</option>
-                        <option value="7016">7016</option>
-                        <option value="8014">8014</option>
-
-                        <option value="1015">1015</option>
-                        <option value="5003">5003</option>
-                        <option value="6005">6005</option>
-                        <option value="7021">7021</option>
-                        <option value="7022">7022</option>
-                        <option value="7035">7035</option>
-
-                        <option value="9006">9006</option>
-                        <option value="9007">9007</option>
-                        <option value="9005">9005</option>
-                        <option value="9010">9010</option>
-                        <option value="9001">9001</option>
+                        <option value="9002" selected>9016</option>
+                        <option value="1021">7016</option>
                     </select><br /><br />
                 </td>
             </tr>
@@ -399,6 +352,112 @@
     </form>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const finition = document.getElementById("finition");
+            const motif = document.getElementById("motif");
+            const motifSelect = document.getElementById("motif-select");
+            const colorInt = document.getElementById("color-int");
+            const colorExt = document.getElementById("color-ext");
+
+            function addOption(value, select) {
+                const option = document.createElement("option");
+                option.value = value;
+                option.text = value;
+                select.appendChild(option);
+            }
+            
+            finition.addEventListener('change', function () {
+                motifSelect.innerHTML = "";
+                colorInt.innerHTML = "";
+                colorExt.innerHTML = "";
+                switch (finition.value) {
+                    case "Woodgrain" : 
+                        motif.style.display = 'table-row';
+                        addOption("Plano", motifSelect); addOption("Ligna", motifSelect); addOption("Plancha", motifSelect); addOption("Cassetta", motifSelect);
+                        addOption("9016", colorInt); addOption("9016", colorExt); addOption("7016", colorInt); addOption("7016", colorExt);
+                        break;
+                    case "Stucco" : 
+                        motif.style.display = 'table-row';
+                        addOption("Plano", motifSelect); addOption("Plancha", motifSelect); addOption("Colore", motifSelect);
+                        addOption("9016", colorInt); addOption("9016", colorExt); 
+                        break;
+                    case "Satin" : 
+                        motif.style.display = 'table-row';
+                        addOption("Plano", motifSelect); addOption("Ligna", motifSelect);
+                        addOption("9016", colorInt); addOption("9016", colorExt);
+                        addOption("7016", colorInt); addOption("7016", colorExt);
+                        addOption("9006", colorInt); addOption("9006", colorExt);
+                        addOption("9007", colorInt); addOption("9007", colorExt);
+                        break;
+                    case "Wood" : 
+                        motif.style.display = 'table-row';
+                        addOption("Plano", motifSelect); addOption("Ligna", motifSelect); addOption("Plancha", motifSelect);
+                        addOption("Chêne", colorInt); addOption("Chêne", colorExt);
+                        addOption("Acajou", colorInt); addOption("Acajou", colorExt);
+                        break;
+                    default : 
+                        motif.style.display = 'none';
+                        addOption(finition.value, colorInt); addOption(finition.value, colorExt);
+                        break;
+                }
+            });
+
+            motifSelect.addEventListener('change', function () {
+                colorInt.innerHTML = "";
+                colorExt.innerHTML = "";
+                switch (finition.value) {
+                    case "Woodgrain" : 
+                        addOption("9016", colorInt); addOption("9016", colorExt); 
+                        if (motifSelect.value === "Plano" || motifSelect.value === "Ligna") {
+                            addOption("7016", colorInt); addOption("7016", colorExt); 
+                        }
+                        break;
+                    case "Stucco" : 
+                        if (motifSelect.value === "Plano" || motifSelect.value === "Plancha") {
+                            addOption("9016", colorInt); addOption("9016", colorExt); 
+                        }
+                        else {
+                            addOption("1015", colorInt); addOption("1015", colorExt);
+                            addOption("1021", colorInt); addOption("1021", colorExt);
+                            addOption("3000", colorInt); addOption("3000", colorExt);
+                            addOption("5003", colorInt); addOption("5003", colorExt);
+                            addOption("5010", colorInt); addOption("5010", colorExt);
+                            addOption("1015", colorInt); addOption("1015", colorExt);
+                            addOption("6005", colorInt); addOption("6005", colorExt);
+                            addOption("6009", colorInt); addOption("6009", colorExt);
+                            addOption("7016", colorInt); addOption("7016", colorExt);
+                            addOption("7021", colorInt); addOption("7021", colorExt);
+                            addOption("7035", colorInt); addOption("7035", colorExt);
+                            addOption("8014", colorInt); addOption("8014", colorExt);
+                            addOption("9001", colorInt); addOption("9001", colorExt);
+                            addOption("9002", colorInt); addOption("9002", colorExt);
+                            addOption("9005", colorInt); addOption("9005", colorExt);
+                            addOption("9006", colorInt); addOption("9006", colorExt);
+                            addOption("9007", colorInt); addOption("9007", colorExt);
+                            addOption("9010", colorInt); addOption("9010", colorExt);
+                            addOption("7022", colorInt); addOption("7022", colorExt);
+                        }
+                        break;
+                    case "Satin" : 
+                        addOption("9016", colorInt); addOption("9016", colorExt);
+                        addOption("7016", colorInt); addOption("7016", colorExt);
+                        if (motifSelect.value === "Ligna") {
+                            addOption("9005", colorInt); addOption("9005", colorExt);
+                        }
+                        else {
+                            addOption("9006", colorInt); addOption("9006", colorExt);
+                            addOption("9007", colorInt); addOption("9007", colorExt);
+                        }
+                        break;
+                    case "Wood" : 
+                        addOption("Chêne", colorInt); addOption("Chêne", colorExt);
+                        addOption("Acajou", colorInt); addOption("Acajou", colorExt);
+                        break;
+                    default : 
+                        addOption(finition.value, colorInt); addOption(finition.value, colorExt);
+                        break;
+                }
+            });
+
             const portillon = document.getElementsByName("Portillon");
             const portillonInfos1 = document.getElementById("portillon-infos-1");
             const portillonInfos2 = document.getElementById("portillon-infos-2");
