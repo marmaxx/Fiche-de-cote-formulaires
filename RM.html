@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulaire PS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        td, th {
+            border: 1px solid #ccc;
+            padding: 12px;
+            vertical-align: top;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="file"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 95%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 98%;
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        input[type="radio"] {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        h3, h4 {
+            color: #444;
+        }
+
+        button[type="submit"] {
+            padding: 12px 24px;
+            background-color: rgb(2, 75, 184);
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Demande de devis - Rideau métallique</h1>
+    <form action="https://formsubmit.co/mariusfil0d0@gmail.com" method="POST">
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="date">Date : </label>
+                    <input type="date" id="date" name="Date" required /><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="commercial">Commercial :</label>
+                    <input type="text" id="commercial" name="Commercial" required /><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="client">Client / Prospect :</label>
+                    <input type="text" id="client" name="Client/Prospect" required/><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="adresse-chantier">Adresse chantier : </label>
+                    <input type="text" id="adresse-chantier" name="Adresse chantier" required/><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="contact">Contact (Nom + n° de téléphone) :</label>
+                    <input type="text" id="contact" name="Contact" required/><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="rampe">Accès remarque/semi : </label>
+                    <label for="remorque1">Oui</label>
+                    <input type="radio" id="remorque1" name="Accès remorque" value="Oui">
+                    <label for="remorque2">Non</label>
+                    <input type="radio" id="remorque2" name="Accès remorque" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="objet">Objet du devis :</label><br />
+                    <textarea name="Objet du devis" required rows="10" cols="100"></textarea><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="depose">Type de dépose :</label>
+                    <select id="depose" name="Type de dépose" required>
+                        <option value="Neuf">Neuf</option>
+                        <option value="Dépose avec soin">Dépose avec soin</option>
+                        <option value="Dépose + Evacuation">Dépose + Evacuation</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="asserv">Asservissement avec un autre équipement :</label>
+                    <label for="asserv1">Oui</label>
+                    <input type="radio" id="asserv1" name="Asservissement avec un autre équipement" value="Oui">
+                    <label for="asserv2">Non</label>
+                    <input type="radio" id="asserv2" name="Asservissement avec un autre équipement" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="date-travaux">Date travaux souhaitée :</label>
+                    <input type="date" id="date-travaux" name="Date travaux">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="localisation">Localisation (joindre photo plan avec) :</label>
+                    <input type="file" id="localisation" name="Localisation">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="spe-horaires">Spécificités horaires :</label>
+                    <input type="text" id="spe-horaires" name="Spécificités horaires">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="spe-environnement">Spécificités environnement (ambiance, température, sécurité) :</label>
+                    <input type="text" id="spe-environnement" name="Spécificités environnement">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="pose">Type de pose :</label>
+                    <select id="pose" name="Type de pose" required>
+                        <option value="Pose en tunnel">Pose en tunnel</option>
+                        <option value="Pose en applique">Pose en applique</option>
+                    </select>
+                </td>
+            </tr>
+            <tr id="pose-en-tunnel" style="display: none;">
+                <td colspan="4" style="text-align: center;">
+                    <img src="tunnel.png" alt="Pose en tunnel" width="500px">
+                </td>
+            </tr>
+            <tr id="pose-en-applique" style="display: none;">
+                <td colspan="4" style="text-align: center;">
+                    <img src="applique.png" alt="Pose en applique" width="500px">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="la">LA :</label>
+                    <input type="number" id="la" name="LA" required><br />
+                    <label for="ecg">ECG :</label>
+                    <input type="number" id="ecg" name="ECG" required><br />
+                    <label for="ha">HA :</label>
+                    <input type="number" id="ha" name="HA" required><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="lb">LB :</label>
+                    <input type="number" id="lb" name="LB" required><br />
+                    <label for="ecd">ECD :</label>
+                    <input type="number" id="ecd" name="ECD" required><br />
+                    <label for="hb">HB :</label>
+                    <input type="number" id="hb" name="HB" required><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="ennroulement">Mode d'enroulement :</label>
+                    <select id="ennroulement" name="Mode d'enroulement">
+                        <option value="Enroulement intérieur">Enroulement intérieur</option>
+                        <option value="Enroulement extérieur">Enroulement extérieur</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="prelaque">Prélaqué RAL: </label>
+                    <select id="prelaque" name="Prélaqué RAL">
+                        <option value="7016">7016</option>
+                        <option value="8017">8017</option>
+                        <option value="9005">9005</option>
+                        <option value="9010">9010</option>
+                    </select>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="thermolaquage">Thermolaquage RAL:</label>
+                    <input type="number" id="thermolaquage" name="Thermolaquage RAL">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="mecanisme">Type de mécanisme :</label>
+                    <select id="mecanisme" name="Type de mécanisme" required>
+                        <option value="Motorisé" selected>Motorisé</option>
+                        <option value="Manuel">Manuel</option>
+                        <option value="Automatique">Automatique</option>
+                    </select><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="boite">Type de boîte :</label>
+                    <select id="boite" name="Type de boîte" required>
+                        <option value="Boîte à boutons" selected>Boîte à boutons</option>
+                        <option value="Boîte à clé">Boîte à clé</option>
+                    </select>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="coulisses">Type de coulisses :</label>
+                    <select id="coulisses" name="Type de coulisses" required>
+                        <option value="Coulisses standard en 60mm" selected>Coulisses standard en 60mm</option>
+                        <option value="Coulisses grand vent en 80mm">Coulisses grand vent en 80mm</option>
+                        <option value="Coulisses à souder">Coulisses à souder</option>
+                        <option value="Coulisses percées en fond">Coulisses percées en fond</option>
+                        <option value="Coulisses percées en façade">Coulisses percées en façade</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label>Débrayage : </label><br />
+                    <label for="debrayage-1"> Oui</label>
+                    <input type="radio" id="debrayage-1" name="Avec débrayage" value="Oui">
+                    <label for="debrayage-2"> Non</label>
+                    <input type="radio" id="debrayage-2" name="Sans débrayage" value="Non">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label>Caisson : </label><br />
+                    <label for="caisson-1"> Avec</label>
+                    <input type="radio" id="caisson-1" name="Avec caisson" value="Oui">
+                    <label for="caisson-2"> Sans</label>
+                    <input type="radio" id="caisson-2" name="Sans caisson" value="Non">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label>Embouts anti-bruits : </label><br />
+                    <label for="anti-bruits-1"> Avec</label>
+                    <input type="radio" id="anti-bruits-1" name="Avec embouts anti-bruits" value="Oui">
+                    <label for="anti-bruits-2"> Sans</label>
+                    <input type="radio" id="anti-bruits-2" name="Sans embouts anti-bruits" value="Non">
+                </td>
+            </tr>
+            <tr> 
+                <td colspan="4" style="text-align: center;">
+                    <label for="observations">Autres / Observations :</label><br />
+                    <textarea id="observations" name="Autres/observations" rows="10" cols="100"></textarea><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <input type="hidden" name="_captcha" value="false" />
+                    <button type="submit">Envoyer</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('pose').addEventListener('change', function() {
+                const choix = this.value;
+                const tunnel = document.getElementById('pose-en-tunnel');
+                const applique = document.getElementById('pose-en-applique');
+
+                if (choix === 'Pose en tunnel') {
+                    tunnel.style.display = '';
+                    applique.style.display = 'none';
+                } else if (choix === 'Pose en applique') {
+                    tunnel.style.display = 'none';
+                    applique.style.display = '';
+                } else {
+                    tunnel.style.display = 'none';
+                    applique.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
