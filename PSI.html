@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulaire PS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        td, th {
+            border: 1px solid #ccc;
+            padding: 12px;
+            vertical-align: top;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="file"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 95%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 98%;
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        input[type="radio"] {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        h3, h4 {
+            color: #444;
+        }
+
+        button[type="submit"] {
+            padding: 12px 24px;
+            background-color: rgb(2, 75, 184);
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Demande de devis - Porte sectionnelle résidentielle</h1>
+    <form action="https://formsubmit.co/mariusfil0d0@gmail.com" method="POST">
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="date">Date : </label>
+                    <input type="date" id="date" name="Date" required /><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="commercial">Commercial :</label>
+                    <input type="text" id="commercial" name="Commercial" required /><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="client">Client / Prospect :</label>
+                    <input type="text" id="client" name="Client/Prospect" required/><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="adresse-chantier">Adresse chantier : </label>
+                    <input type="text" id="adresse-chantier" name="Adresse chantier" required/><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="contact">Contact (Nom + n° de téléphone) :</label>
+                    <input type="text" id="contact" name="Contact" required/><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="rampe">Rampe d'accès : </label>
+                    <label for="rampe1">Oui</label>
+                    <input type="radio" id="rampe1" name="Rampe d'accès" value="Oui">
+                    <label for="rampe2">Non</label>
+                    <input type="radio" id="rampe2" name="Rampe d'accès" value="Non"><br /><br />
+                    <label for="rampe">Accès remarque/semi : </label>
+                    <label for="remorque1">Oui</label>
+                    <input type="radio" id="remorque1" name="Accès remorque" value="Oui">
+                    <label for="remorque2">Non</label>
+                    <input type="radio" id="remorque2" name="Accès remorque" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="objet">Objet du devis :</label><br />
+                    <textarea name="Objet du devis" required rows="10" cols="100"></textarea><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="depose">Type de dépose :</label>
+                    <select id="depose" name="Type de dépose" required>
+                        <option value="Neuf">Neuf</option>
+                        <option value="Dépose avec soin">Dépose avec soin</option>
+                        <option value="Dépose + Evacuation">Dépose + Evacuation</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="asserv">Asservissement avec un autre équipement :</label>
+                    <label for="asserv1">Oui</label>
+                    <input type="radio" id="asserv1" name="Asservissement avec un autre équipement" value="Oui">
+                    <label for="asserv2">Non</label>
+                    <input type="radio" id="asserv2" name="Asservissement avec un autre équipement" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="date-travaux">Date travaux souhaitée :</label>
+                    <input type="date" id="date-travaux" name="Date travaux">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="localisation">Localisation (joindre photo plan avec) :</label>
+                    <input type="file" id="localisation" name="Localisation">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="spe-horaires">Spécificités horaires :</label>
+                    <input type="text" id="spe-horaires" name="Spécificités horaires">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="spe-environnement">Spécificités environnement (ambiance, température, sécurité) :</label>
+                    <input type="text" id="spe-environnement" name="Spécificités environnement">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <img src="vue-int.png" alt="Vue intérieure" width="500px"><br /><br />
+                    <label for="support">Support :</label>
+                    <input type="text" id="support" name="Support" required>
+                    
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="largeur">Largeur :</label>
+                    <input type="number" id="largeur" name="Largeur de la porte" required><br />
+                    <label for="hauteur">Hauteur :</label>
+                    <input type="number" id="hauteur" name="Hauteur de la porte" required><br />
+                    <label for="hsp">Hauteur sous plafond :</label>
+                    <input type="number" id="hsp" name="Hauteur sous plafond" required><br />
+                    <label for="ld">Linteau disponible :</label>
+                    <input type="number" id="ld" name="Linteau disponible"><br />
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align: center;">
+                    <label for="levee">Système de levée :</label>
+                    <select id="levee" name="Système de levée" required>
+                        <option value="Standard">Levée standard</option>
+                        <option value="Haute">Levée haute</option>
+                        <option value="Verticale">Levée verticale</option>
+                        <option value="Linteau Réduit">Linteau réduit</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="1" style="text-align: center;">
+                    <label for="pente">Levée sous pente (en ° ou %) :</label>
+                    <input type="text" id="pente" name="Levée sous pente"><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="type-porte">Type de porte :</label>
+                    <select id="type-porte" name="Type de porte" required>
+                        <option value="PS en 40mm" selected>PS en 40mm</option>
+                        <option value="PS en 80mm">PS en 80mm</option>
+                        <option valuen="PS en T">PS en T</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="mecanisme">Type de mécanisme :</label>
+                    <select id="mecanisme" name="Type de mécanisme" required>
+                        <option value="Motorisé (homme mort)" selected>Motorisé (homme mort)</option>
+                        <option value="A corde ">Manuelle - à corde</option>
+                        <option value="Treuil à chaine">Manuelle - treuil à chaine</option>
+                        <option value="Automatique">Automatique</option>
+                    </select><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="tension">Tension du moteur (si choisi) :</label>
+                    <select id="tension" name="Tension du moteur (si choisi)" required>
+                        <option value="400" selected>400 V</option>
+                        <option value="230">230 V</option>
+                    </select>
+
+                    <label for="emplacement-moteur">Emplacement du moteur (si choisi) :</label>
+                    <select id="emplacement-moteur" name="Emplacement du moteur (si choisi)">
+                        <option value="gauche">à gauche </option>
+                        <option value="droite">à droite</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="activation">Système d'activation (si auto) :</label>
+                    <input type="text" id="activation" name="Système d'activation (si auto)"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <img src="couleurs.png" alt="couleurs" width="500px">
+                    <p>Pour les PS en 80 mm RAL dispos sans plus value : 9002/9006/7016</p>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="color-ext"> Face extérieure : </label>
+                    <select id="color-ext" name="Couleur face extérieure" required>
+                        <option value="1021">1021</option>
+                        <option value="3000">3000</option>
+                        <option value="5010">5010</option>
+                        <option value="6009">6009</option>
+                        <option value="7016">7016</option>
+                        <option value="8014">8014</option>
+
+                        <option value="1015">1015</option>
+                        <option value="5003">5003</option>
+                        <option value="6005">6005</option>
+                        <option value="7021">7021</option>
+                        <option value="7022">7022</option>
+                        <option value="7035">7035</option>
+                        
+                        <option value="9002">9002</option>
+                        <option value="9006">9006</option>
+                        <option value="9007">9007</option>
+                        <option value="9005">9005</option>
+                        <option value="9010">9010</option>
+                        <option value="9001">9001</option>
+                    </select><br /><br />
+                    <label for="color-int"> Face intérieure (si différent du RAL 9002): </label>
+                    <select id="color-int" name="Couleur face intérieure" required>
+                        <option value="9002" selected>9002</option>
+                        <option value="1021">1021</option>
+                        <option value="3000">3000</option>
+                        <option value="5010">5010</option>
+                        <option value="6009">6009</option>
+                        <option value="7016">7016</option>
+                        <option value="8014">8014</option>
+
+                        <option value="1015">1015</option>
+                        <option value="5003">5003</option>
+                        <option value="6005">6005</option>
+                        <option value="7021">7021</option>
+                        <option value="7022">7022</option>
+                        <option value="7035">7035</option>
+
+                        <option value="9006">9006</option>
+                        <option value="9007">9007</option>
+                        <option value="9005">9005</option>
+                        <option value="9010">9010</option>
+                        <option value="9001">9001</option>
+                    </select><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <h3>Les options :</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Sections vitrées</h4>
+                    <label for="nombre">Nombre :</label>
+                    <input type="text" id="nombre" name="Nombre de sections vitrées"><br />
+                    <label for="section">Section :</label>
+                    <input type="text" id="section" name="Section (section vitrée)">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Rangée de hublots</h4>
+                    <label for="nombre">Nombre :</label>
+                    <input type="text" id="nombre" name="Nombre de hublots"><br />
+                    <label for="section">Section :</label>
+                    <input type="text" id="section" name="Section (hublot)"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <h3> Portillon intégré </h3>
+                    <label for="portillon1">Oui</label>
+                    <input type="radio" id="portillon1" name="Portillon" value="Oui">
+                    <label for="portillon2">Non</label>
+                    <input type="radio" id="portillon2" name="Portillon" value="Non"><br />
+                </td>
+            </tr>
+            <tr id="portillon-infos-1" style="display: none;">
+                <td colspan="2" style="text-align: center;">
+                    <label for="serrure">Type de serrure :</label>
+                    <select id="serrure" name="Type de serrure">
+                        <option value="Serrure 1 pts">Serrure 1 pts</option>
+                        <option value="Serrure 3 pts">Serrure 3 pts</option>
+                        <option value="Serrure anti panique">Serrure anti-panique</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="emplacement-portillon">Emplacement du portillon :</label>
+                    <select id="emplacement-portillon" name="Emplacement du portillon">
+                        <option value="Poussant gauche">Poussant gauche</option>
+                        <option value="Poussant droite">Poussant droit</option>
+                    </select><br /><br />
+                </td>
+            </tr>
+            <tr id="portillon-infos-2" style="display: none;">
+                <td colspan="2" style="text-align: center;">
+                    <h4>Intérieur</h4>
+                    <label>Béquille : </label>
+                    <label for="bequille1">Oui</label>
+                    <input type="radio" id="bequille1" name="Béquille (int)" value="Oui">
+                    <label for="bequille2">Non</label>
+                    <input type="radio" id="bequille2" name="Béquille (int)" value="Non"><br /><br />
+                    <label>BAP : </label>
+                    <label for="bap1">Oui</label>
+                    <input type="radio" id="bap1" name="BAP" value="Oui">
+                    <label for="bap2">Non</label>
+                    <input type="radio" id="bap2" name="BAP" value="Non"><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Extérieur</h4>
+                    <label>Béquille : </label>
+                    <label for="bequille3">Oui</label>
+                    <input type="radio" id="bequille3" name="Béquille (ext)" value="Oui">
+                    <label for="bequille4">Non</label>
+                    <input type="radio" id="bequille4" name="Béquille (ext)" value="Non"><br /><br />
+                    <label>Poignée fixe : </label>
+                    <label for="poignee1">Oui</label>
+                    <input type="radio" id="poignee1" name="Poignée fixe" value="Oui">
+                    <label for="poignee2">Non</label>
+                    <input type="radio" id="poignee2" name="Poignée fixe" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr> 
+                <td colspan="4" style="text-align: center;">
+                    <label for="observations">Autres / Observations :</label><br />
+                    <textarea id="observations" name="Autres/observations" rows="10" cols="100"></textarea><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <input type="hidden" name="_captcha" value="false" />
+                    <button type="submit">Envoyer</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const portillon = document.getElementsByName("Portillon");
+            const portillonInfos1 = document.getElementById("portillon-infos-1");
+            const portillonInfos2 = document.getElementById("portillon-infos-2");
+            portillon.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    if (document.getElementById('portillon1').checked) {
+                        portillonInfos1.style.display = 'table-row';
+                        portillonInfos2.style.display = 'table-row';
+                    } else {
+                        portillonInfos1.style.display = 'none';
+                        portillonInfos2.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
