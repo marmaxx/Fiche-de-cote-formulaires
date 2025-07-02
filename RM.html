@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <title>Formulaire PS</title>
+    <title>Demande de devis - RM</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -103,7 +103,7 @@
 </head>
 <body>
     <h1 style="text-align: center;">Demande de devis - Rideau métallique</h1>
-    <form action="https://formsubmit.co/mariusfil0d0@gmail.com" method="POST">
+    <form action="https://formsubmit.co/clemence@eiefrance.com" method="POST">
         <table>
             <tr>
                 <td colspan="2" style="text-align: center;">
@@ -112,7 +112,7 @@
                 </td>
                 <td colspan="2" style="text-align: center;">
                     <label for="commercial">Commercial :</label>
-                    <input type="text" id="commercial" name="Commercial" required /><br /><br />
+                    <input type="text" id="commercial" name="Commercial"/><br /><br />
                 </td>
             </tr>
             <tr>
@@ -185,8 +185,8 @@
                 <td colspan="4" style="text-align: center;">
                     <label for="pose">Type de pose :</label>
                     <select id="pose" name="Type de pose" required>
-                        <option value="Pose en tunnel">Pose en tunnel</option>
                         <option value="Pose en applique">Pose en applique</option>
+                        <option value="Pose en tunnel">Pose en tunnel</option>
                     </select>
                 </td>
             </tr>
@@ -195,27 +195,27 @@
                     <img src="tunnel.png" alt="Pose en tunnel" width="500px">
                 </td>
             </tr>
-            <tr id="pose-en-applique" style="display: none;">
+            <tr id="pose-en-applique">
                 <td colspan="4" style="text-align: center;">
                     <img src="applique.png" alt="Pose en applique" width="500px">
                 </td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
-                    <label for="la">LA :</label>
+                    <label for="la">LA (largeur hors coulisse) :</label>
                     <input type="number" id="la" name="LA" required><br />
+                    <label for="ha">HA (hauteur hors enroulement) :</label>
+                    <input type="number" id="ha" name="HA" required><br />
                     <label for="ecg">ECG :</label>
                     <input type="number" id="ecg" name="ECG" required><br />
-                    <label for="ha">HA :</label>
-                    <input type="number" id="ha" name="HA" required><br />
                 </td>
                 <td colspan="2" style="text-align: center;">
-                    <label for="lb">LB :</label>
+                    <label for="lb">LB (largeur avec coulisse) :</label>
                     <input type="number" id="lb" name="LB" required><br />
+                    <label for="hb">HB (hauteur avec enroulement) :</label>
+                    <input type="number" id="hb" name="HB" required><br />
                     <label for="ecd">ECD :</label>
                     <input type="number" id="ecd" name="ECD" required><br />
-                    <label for="hb">HB :</label>
-                    <input type="number" id="hb" name="HB" required><br />
                 </td>
             </tr>
             <tr>
@@ -228,6 +228,15 @@
                 </td>
             </tr>
             <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label>Galva : </label><br />
+                    <label for="galva1"> Oui</label>
+                    <input type="radio" id="galva1" name="Galva" value="Oui">
+                    <label for="galva2"> Non</label>
+                    <input type="radio" id="galva2" name="Galva" value="Non">
+                </td>
+            </tr>
+            <tr id="couleurs" style="display: none;">
                 <td colspan="2" style="text-align: center;">
                     <label for="prelaque">Prélaqué RAL: </label>
                     <select id="prelaque" name="Prélaqué RAL">
@@ -235,7 +244,12 @@
                         <option value="8017">8017</option>
                         <option value="9005">9005</option>
                         <option value="9010">9010</option>
+                        <option value="Autre">Autre</option>
                     </select>
+                    <div class="autre-ral" style="display: none;">
+                        <label for="autre">Autre (en supplément):</label>
+                        <input type="number" id="autre" name="Autre RAL">
+                    </div>
                 </td>
                 <td colspan="2" style="text-align: center;">
                     <label for="thermolaquage">Thermolaquage RAL:</label>
@@ -254,17 +268,15 @@
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
-                    <label for="boite">Type de boîte :</label>
-                    <select id="boite" name="Type de boîte" required>
-                        <option value="Boîte à boutons" selected>Boîte à boutons</option>
-                        <option value="Boîte à clé">Boîte à clé</option>
+                    <label for="coulisses1">Format de coulisses :</label>
+                    <select id="coulisses1" name="Format de coulisses" required>
+                        <option value="Coulisses standard en 60mm" selected>Coulisses standard en 60mm</option>
+                        <option value="Coulisses grand vent en 80mm">Coulisses grand vent en 80mm</option>
                     </select>
                 </td>
                 <td colspan="2" style="text-align: center;">
-                    <label for="coulisses">Type de coulisses :</label>
-                    <select id="coulisses" name="Type de coulisses" required>
-                        <option value="Coulisses standard en 60mm" selected>Coulisses standard en 60mm</option>
-                        <option value="Coulisses grand vent en 80mm">Coulisses grand vent en 80mm</option>
+                    <label for="coulisses2">Type de coulisses :</label>
+                    <select id="coulisses2" name="Type de coulisses">
                         <option value="Coulisses à souder">Coulisses à souder</option>
                         <option value="Coulisses percées en fond">Coulisses percées en fond</option>
                         <option value="Coulisses percées en façade">Coulisses percées en façade</option>
@@ -273,7 +285,7 @@
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
-                    <label>Débrayage : </label><br />
+                    <label>Débrayage (obligatoire si local borgne) : </label><br />
                     <label for="debrayage-1"> Oui</label>
                     <input type="radio" id="debrayage-1" name="Avec débrayage" value="Oui">
                     <label for="debrayage-2"> Non</label>
@@ -289,11 +301,11 @@
             </tr>
             <tr>
                 <td colspan="4" style="text-align: center;">
-                    <label>Embouts anti-bruits : </label><br />
-                    <label for="anti-bruits-1"> Avec</label>
-                    <input type="radio" id="anti-bruits-1" name="Avec embouts anti-bruits" value="Oui">
-                    <label for="anti-bruits-2"> Sans</label>
-                    <input type="radio" id="anti-bruits-2" name="Sans embouts anti-bruits" value="Non">
+                    <label for="boite">Type de boîte :</label>
+                    <select id="boite" name="Type de boîte" required>
+                        <option value="Boîte à boutons" selected>Boîte à boutons</option>
+                        <option value="Boîte à clé">Boîte à clé</option>
+                    </select>
                 </td>
             </tr>
             <tr> 
@@ -327,6 +339,26 @@
                     tunnel.style.display = 'none';
                     applique.style.display = 'none';
                 }
+            });
+
+            const galva = document.getElementsByName("Galva");
+            const couleurs = document.getElementById('couleurs');
+            galva.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    if (document.getElementById('galva1').checked) {
+                        couleurs.style.display = 'none';
+                    } else {
+                        couleurs.style.display = 'table-row';
+                    }
+                });
+            });
+
+            document.getElementById('prelaque').addEventListener('change', function () {
+                const choix = this.value;
+                const autre = document.querySelector(".autre-ral");
+
+                if (choix === 'Autre') autre.style.display = '';
+                else autre.style.display = 'none';
             });
         });
     </script>
