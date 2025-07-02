@@ -385,27 +385,27 @@
             }
             
             finition.addEventListener('change', function () {
-                motifSelect.innerHTML = ""; colorInt.innerHTML = ""; colorExt.innerHTML = "";
+                motifSelect.innerHTML = ""; colorInt.innerHTML = ""; colorExt.innerHTML = ""; const image = document.getElementById("image");
                 document.querySelector(".autre-ral-ext").style.display = 'none';  document.querySelector(".autre-ral-int").style.display = 'none';
                 switch (finition.value) {
                     case "Woodgrain" : 
-                        motif.style.display = 'table-row';
+                        motif.style.display = 'table-row'; image.src = "woodgrain-plano.png";
                         addOption("Plano", motifSelect); addOption("Ligna", motifSelect); addOption("Plancha", motifSelect); addOption("Cassetta", motifSelect);
                         addOption("9016", colorInt); addOption("9016", colorExt); addOption("7016", colorInt); addOption("7016", colorExt); addOption("Autre", colorInt); addOption("Autre", colorExt);
                         break;
                     case "Stucco" : 
-                        motif.style.display = 'table-row';
+                        motif.style.display = 'table-row'; image.src = "woodgrain-plano.png";
                         addOption("Plano", motifSelect); addOption("Plancha", motifSelect); addOption("Colore", motifSelect);
                         addOption("9016", colorInt); addOption("9016", colorExt); addOption("Autre", colorInt); addOption("Autre", colorExt);
                         break;
                     case "Satin" : 
-                        motif.style.display = 'table-row';
+                        motif.style.display = 'table-row'; image.src = "woodgrain-plano.png";
                         addOption("Plano", motifSelect); addOption("Ligna", motifSelect);
                         addOption("9016", colorInt); addOption("9016", colorExt); addOption("7016", colorInt); addOption("7016", colorExt); addOption("9006", colorInt); addOption("9006", colorExt);
                         addOption("9007", colorInt); addOption("9007", colorExt); addOption("Autre", colorInt); addOption("Autre", colorExt);
                         break;
                     case "Wood" : 
-                        motif.style.display = 'table-row';
+                        motif.style.display = 'table-row'; image.src = "wood-plano-1.png";
                         addOption("Plano", motifSelect); addOption("Ligna", motifSelect); addOption("Plancha", motifSelect);
                         addOption("Chêne", colorInt); addOption("Chêne", colorExt); addOption("Acajou", colorInt); addOption("Acajou", colorExt); addOption("Autre", colorInt); addOption("Autre", colorExt);
                         break;
@@ -416,14 +416,12 @@
                         addOption("9016", colorInt); addOption("9016", colorExt); addOption("7016", colorInt); addOption("7016", colorExt);
                         addOption("Autre", colorInt); addOption("Autre", colorExt);
                         break;
-                    case "Quartz" : image.src = "quartz.png"; break;
-                    case "Nero" : image.src = "nero.png"; break;
-                    case "Granite" : image.src = "granite.png"; break;
-                    case "Antra" : image.src = "antra.png"; break;
-                    case "Corten" : image.src = "corten.png"; break;
+                    case "Quartz" : image.src = "quartz.png"; addOption(finition.value, colorInt); addOption(finition.value, colorExt); break;
+                    case "Nero" : image.src = "nero.png"; addOption(finition.value, colorInt); addOption(finition.value, colorExt); break;
+                    case "Granite" : image.src = "granite.png"; addOption(finition.value, colorInt); addOption(finition.value, colorExt); break;
+                    case "Antra" : image.src = "antra.png"; addOption(finition.value, colorInt); addOption(finition.value, colorExt); break;
+                    case "Corten" : image.src = "corten.png"; addOption(finition.value, colorInt); addOption(finition.value, colorExt); break;
                     default : 
-                        //motif.style.display = 'none'; 
-                        addOption(finition.value, colorInt); addOption(finition.value, colorExt);
                         break;
                 }
             });
