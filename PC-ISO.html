@@ -296,39 +296,5 @@
             </tr>
         </table>
     </form>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const portillon = document.getElementsByName("Portillon");
-            const portillonInfos1 = document.getElementById("portillon-infos-1");
-            const portillonInfos2 = document.getElementById("portillon-infos-2");
-            portillon.forEach(radio => {
-                radio.addEventListener('change', () => {
-                    if (document.getElementById('portillon1').checked) {
-                        portillonInfos1.style.display = 'table-row';
-                        portillonInfos2.style.display = 'table-row';
-                    } else {
-                        portillonInfos1.style.display = 'none';
-                        portillonInfos2.style.display = 'none';
-                    }
-                });
-            });
-
-            document.getElementById('color-ext').addEventListener('change', function () {
-                const choix = this.value;
-                const autre = document.querySelector(".autre-ral-ext");
-
-                if (choix === "Autre") autre.style.display = '';
-                else autre.style.display = 'none';
-            });
-
-            document.getElementById('color-int').addEventListener('change', function () {
-                const choix = this.value;
-                const autre = document.querySelector(".autre-ral-int");
-
-                if (choix === "Autre") autre.style.display = '';
-                else autre.style.display = 'none';
-            });
-        });
-    </script>
 </body>
 </html>
