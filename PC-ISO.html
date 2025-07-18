@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Demande de devis - PC-ISO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        td, th {
+            border: 1px solid #ccc;
+            padding: 12px;
+            vertical-align: top;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="file"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 95%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 98%;
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        input[type="radio"] {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        h3, h4 {
+            color: #444;
+        }
+
+        button[type="submit"] {
+            padding: 12px 24px;
+            background-color: rgb(2, 75, 184);
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Demande de devis - Porte coulissante ISO</h1>
+    <form action="https://formsubmit.co/clemence@eiefrance.com" method="POST">
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="date">Date : </label>
+                    <input type="date" id="date" name="Date" required /><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="commercial">Commercial :</label>
+                    <input type="text" id="commercial" name="Commercial"/><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="client">Client / Prospect :</label>
+                    <input type="text" id="client" name="Client/Prospect" required/><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="adresse-chantier">Adresse chantier : </label>
+                    <input type="text" id="adresse-chantier" name="Adresse chantier" required/><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="contact">Contact (Nom + n° de téléphone) :</label>
+                    <input type="text" id="contact" name="Contact" required/><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="rampe">Rampe d'accès : </label>
+                    <label for="rampe1">Oui</label>
+                    <input type="radio" id="rampe1" name="Rampe d'accès" value="Oui">
+                    <label for="rampe2">Non</label>
+                    <input type="radio" id="rampe2" name="Rampe d'accès" value="Non"><br /><br />
+                    <label for="rampe">Accès remarque/semi : </label>
+                    <label for="remorque1">Oui</label>
+                    <input type="radio" id="remorque1" name="Accès remorque" value="Oui">
+                    <label for="remorque2">Non</label>
+                    <input type="radio" id="remorque2" name="Accès remorque" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="objet">Objet du devis :</label><br />
+                    <textarea name="Objet du devis" required rows="10" cols="100"></textarea><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="depose">Type de dépose :</label>
+                    <select id="depose" name="Type de dépose" required>
+                        <option value="Neuf">Neuf</option>
+                        <option value="Dépose avec soin">Dépose avec soin</option>
+                        <option value="Dépose + Evacuation">Dépose + Evacuation</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="asserv">Asservissement avec un autre équipement :</label>
+                    <label for="asserv1">Oui</label>
+                    <input type="radio" id="asserv1" name="Asservissement avec un autre équipement" value="Oui">
+                    <label for="asserv2">Non</label>
+                    <input type="radio" id="asserv2" name="Asservissement avec un autre équipement" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="date-travaux">Date travaux souhaitée :</label>
+                    <input type="date" id="date-travaux" name="Date travaux">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="localisation">Localisation (joindre photo plan avec) :</label>
+                    <input type="file" id="localisation" name="Localisation">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="spe-horaires">Spécificités horaires :</label>
+                    <input type="text" id="spe-horaires" name="Spécificités horaires">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="spe-environnement">Spécificités environnement (ambiance, température, sécurité) :</label>
+                    <input type="text" id="spe-environnement" name="Spécificités environnement">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="https://eiefrance.com/wp-content/uploads/2025/06/pc-iso.webp"> <img src="https://eiefrance.com/wp-content/uploads/2025/06/pc-iso.webp" alt="Vue intérieure" style="width: 400px;"> </a> <br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="hsp">Hauteur sous plafond :</label>
+                    <input type="number" id="hsp" name="Hauteur sous plafond" required><br />
+                    <label for="rd">Recul disponible :</label>
+                    <input type="number" id="rd" name="Recul disponible"><br />
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="ouverture">Type d'ouverture :</label>
+                    <select id="ouverture" name="Type d'ouverture" required>
+                        <option value="ouverture gauche" selected>Ouverture gauche</option>
+                        <option value="ouverture droite">Ouverture droite</option>
+                    </select><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="vantail">Type de vantail :</label>
+                    <select id="vantail" name="Type de vantail" required>
+                        <option value="vantail 70" selected>Vantail 70</option>
+                        <option value="vanatil 90">Vantail 90</option>
+                        <option value="vanatil 120">Vantail 120</option>
+                    </select><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="mecanisme">Type de mécanisme :</label>
+                    <select id="mecanisme" name="Type de mécanisme" required>
+                        <option value="manuelle" selected>Manuelle</option>
+                        <option value="automatique">Automatique</option>
+                    </select><br /><br />
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="type-support">Type du support </label>
+                    <input type="text" id="type-support" name="Type du support" required><br /><br />
+                    <label for="epaisseur-support">Epaisseur du support (en mm) :</label>
+                    <input type="number" id="epaisseur-support" name="Epaisseur du support" required><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="type-seuil">Type de seuil :</label>
+                    <input type="text" id="type-seuil" name="Type de seuil" required><br /><br />
+                    <label for="activation">Système d'activation :</label>
+                    <input type="text" id="activation" name="Système d'activation" required><br /><br />
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label>Verrouillage extérieur : </label>
+                    <label for="verrouillage1">Oui</label>
+                    <input type="radio" id="verrouillage1" name="Verrouillage extérieur" value="Oui">
+                    <label for="verrouillage2">Non</label>
+                    <input type="radio" id="verrouillage2" name="Verrouillage extérieur" value="Non">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label>Finition inox : </label>
+                    <label for="inox1">Oui</label>
+                    <input type="radio" id="inox1" name="Finition inox" value="Oui">
+                    <label for="inox2">Non</label>
+                    <input type="radio" id="inox2" name="Finition inox" value="Non">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label>Passage de rail : </label>
+                    <label for="rail1">Oui</label>
+                    <input type="radio" id="rail1" name="Passage de rail" value="Oui">
+                    <label for="rail2">Non</label>
+                    <input type="radio" id="rail2" name="Passage de rail" value="Non">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label>Version SC-L (sans cadre) : </label>
+                    <label for="sc-l1">Oui</label>
+                    <input type="radio" id="sc-l1" name="Version SC-L (sans cadre)" value="Oui">
+                    <label for="sc-l2">Non</label>
+                    <input type="radio" id="sc-l2" name="Version SC-L (sans cadre)" value="Non">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label>Hublot : </label>
+                    <label for="hublot1">Oui</label>
+                    <input type="radio" id="hublot1" name="Hublot" value="Oui">
+                    <label for="hublot2">Non</label>
+                    <input type="radio" id="hublot2" name="Hublot" value="Non">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label>2 vantaux : </label>
+                    <label for="vantaux1">Oui</label>
+                    <input type="radio" id="vantaux1" name="2 vantaux" value="Oui">
+                    <label for="vantaux2">Non</label>
+                    <input type="radio" id="vantaux2" name="2 vantaux" value="Non">
+                </td>
+            </tr>
+            <tr> 
+                <td colspan="4" style="text-align: center;">
+                    <label for="observations">Autres / Observations :</label><br />
+                    <textarea id="observations" name="Autres/observations" rows="10" cols="100"></textarea><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <input type="hidden" name="_captcha" value="false" />
+                    <button type="submit">Envoyer</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const portillon = document.getElementsByName("Portillon");
+            const portillonInfos1 = document.getElementById("portillon-infos-1");
+            const portillonInfos2 = document.getElementById("portillon-infos-2");
+            portillon.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    if (document.getElementById('portillon1').checked) {
+                        portillonInfos1.style.display = 'table-row';
+                        portillonInfos2.style.display = 'table-row';
+                    } else {
+                        portillonInfos1.style.display = 'none';
+                        portillonInfos2.style.display = 'none';
+                    }
+                });
+            });
+
+            document.getElementById('color-ext').addEventListener('change', function () {
+                const choix = this.value;
+                const autre = document.querySelector(".autre-ral-ext");
+
+                if (choix === "Autre") autre.style.display = '';
+                else autre.style.display = 'none';
+            });
+
+            document.getElementById('color-int').addEventListener('change', function () {
+                const choix = this.value;
+                const autre = document.querySelector(".autre-ral-int");
+
+                if (choix === "Autre") autre.style.display = '';
+                else autre.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

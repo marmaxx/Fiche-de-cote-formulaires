@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Demande de devis - PS-IS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        td, th {
+            border: 1px solid #ccc;
+            padding: 12px;
+            vertical-align: top;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="file"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 95%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 98%;
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        input[type="radio"] {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        h3, h4 {
+            color: #444;
+        }
+
+        button[type="submit"] {
+            padding: 12px 24px;
+            background-color: rgb(2, 75, 184);
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Demande de devis - Porte de service ou IS</h1>
+    <form action="https://formsubmit.co/clemence@eiefrance.com" method="POST">
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="date">Date : </label>
+                    <input type="date" id="date" name="Date" required /><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="commercial">Commercial :</label>
+                    <input type="text" id="commercial" name="Commercial"/><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="client">Client / Prospect :</label>
+                    <input type="text" id="client" name="Client/Prospect" required/><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="adresse-chantier">Adresse chantier : </label>
+                    <input type="text" id="adresse-chantier" name="Adresse chantier" required/><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="contact">Contact (Nom + n° de téléphone) :</label>
+                    <input type="text" id="contact" name="Contact" required/><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="rampe">Accès remarque/semi : </label>
+                    <label for="remorque1">Oui</label>
+                    <input type="radio" id="remorque1" name="Accès remorque" value="Oui">
+                    <label for="remorque2">Non</label>
+                    <input type="radio" id="remorque2" name="Accès remorque" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="objet">Objet du devis :</label><br />
+                    <textarea name="Objet du devis" required rows="10" cols="100"></textarea><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="depose">Type de dépose :</label>
+                    <select id="depose" name="Type de dépose" required>
+                        <option value="Neuf">Neuf</option>
+                        <option value="Dépose avec soin">Dépose avec soin</option>
+                        <option value="Dépose + Evacuation">Dépose + Evacuation</option>
+                    </select><br /><br />
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="asserv">Asservissement avec un autre équipement :</label>
+                    <label for="asserv1">Oui</label>
+                    <input type="radio" id="asserv1" name="Asservissement avec un autre équipement" value="Oui">
+                    <label for="asserv2">Non</label>
+                    <input type="radio" id="asserv2" name="Asservissement avec un autre équipement" value="Non"><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="date-travaux">Date travaux souhaitée :</label>
+                    <input type="date" id="date-travaux" name="Date travaux">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="localisation">Localisation (joindre photo plan avec) :</label>
+                    <input type="file" id="localisation" name="Localisation">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="spe-horaires">Spécificités horaires :</label>
+                    <input type="text" id="spe-horaires" name="Spécificités horaires">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="spe-environnement">Spécificités environnement (ambiance, température, sécurité) :</label>
+                    <input type="text" id="spe-environnement" name="Spécificités environnement">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="https://eiefrance.com/wp-content/uploads/2025/06/pcf.webp"></a> <img src="https://eiefrance.com/wp-content/uploads/2025/06/pcf.webp" alt="Vue mur béton" style="width: 300px;"> </a>
+                    <a href="https://eiefrance.com/wp-content/uploads/2025/06/dimensions-standards.webp"></a> <img src="https://eiefrance.com/wp-content/uploads/2025/06/dimensions-standards.webp" alt="Vue mur brique" style="height: 100px; width: auto;"> </a>
+                    <p style="color: red;"><strong>Pose en tunnel</strong> <br> Largeur de réservation = Largeur de passage + 120mm <br> Hauteur de réservation = Hauteur de passage + 60mm</p>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h3>Dimensions de passage</h3>
+                    <label for="largeur-passage">Largeur :</label>
+                    <input type="number" id="largeur-passage" name="Largeur de passage" required><br />
+                    <label for="hauteur-passage">Hauteur :</label>
+                    <input type="number" id="hauteur-passage" name="Hauteur de passage" required><br />
+                    <h3>Dimensions de réservation (avec cadre)</h3>
+                    <label for="largeur-resa">Largeur :</label>
+                    <input type="number" id="largeur-resa" name="Largeur de réservation" required><br />
+                    <label for="hauteur-resa">Hauteur :</label>
+                    <input type="number" id="hauteur-resa" name="Hauteur de réservation" required><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label for="serrure">Type de serrure :</label>
+                    <select id="serrure" name="Type de serrure" required>
+                        <option value="1pt" selected>Serrure 1pt</option>
+                        <option value="3pts">Serrure 3pts</option>
+                    </select><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label for="ral-malerba">RAL selon nuancier malerba :</label>
+                    <select id="ral-malerba" name="RAL selon nuancier malerba" required>
+                        <option value="9010" selected>9010</option>
+                        <option value="1015" selected>1015</option>
+                        <option value="7035" selected>7035</option>
+                        <option value="7022" selected>7022</option>
+                        <option value="9006" selected>9006</option>
+                        <option value="5008" selected>5008</option>
+                        <option value="7016" selected>7016</option>
+                        <option value="9010" selected>9005</option>
+                    </select>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="ral-k7">RAL selon nuancier K7 :</label>
+                    <select id="ral-k7" name="RAL selon nuancier K7" required>
+                        <option value="9010" selected>9010</option>
+                        <option value="1015" selected>1015</option>
+                        <option value="7035" selected>7035</option>
+                        <option value="7022" selected>7022</option>
+                        <option value="9006" selected>9006</option>
+                        <option value="5008" selected>5008</option>
+                        <option value="7016" selected>7016</option>
+                        <option value="9010" selected>9005</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <label>Nombre de vantaux : </label><br />
+                    <select id="nombre-vantaux" name="Nombre de vantaux" required>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr id="inegaux" style="display: none;">
+                <td colspan="4" style="text-align: center;">
+                    <label>Vantaux inégaux :</label>
+                    <label for="vantaux-inegaux">Oui</label>
+                    <input type="radio" id="vantaux-inegaux" name="Vantaux inégaux" value="Oui">
+                    <label for="vantaux-egaux">Non</label>
+                    <input type="radio" id="vantaux-egaux" name="Vantaux égaux" value="Non">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="vantail" style="text-align: center;">
+                    <a href="https://eiefrance.com/wp-content/uploads/2025/06/vantail.webp"></a> <img src="https://eiefrance.com/wp-content/uploads/2025/06/vantail.webp" alt="Pose en tunnel" style="width: 100%;"> </a>
+                </td>
+                <td colspan="2" id="vantaux" style="text-align: center; display: none;">
+                    <a href="https://eiefrance.com/wp-content/uploads/2025/06/vantaux.webp"></a> <img src="https://eiefrance.com/wp-content/uploads/2025/06/vantaux.webp" alt="Pose en tunnel" style="width: 100%;"> </a>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label for="vantail">Type de vantail :</label>
+                    <select id="vantail-1" name="Type de vantail" >
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <select id="vantail-2" name="Type de vantail" style="display: none;">
+                        <option value="1" selected>5</option>
+                        <option value="2">6</option>
+                        <option value="3">7</option>
+                        <option value="4">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label>BAP : </label>
+                    <label for="bap1">Oui</label>
+                    <input type="radio" id="bap1" name="BAP" value="Oui">
+                    <label for="bap2">Non</label>
+                    <input type="radio" id="bap2" name="BAP" value="Non">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label>PUSH BAR : </label>
+                    <label for="push-bar-1">Oui</label>
+                    <input type="radio" id="push-bar-1" name="PUSH BAR" value="Oui">
+                    <label for="push-bar-2">Non</label>
+                    <input type="radio" id="push-bar-2" name="PUSH BAR" value="Non">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <label>Ferme porte : </label>
+                    <label for="ferme-porte-1">Oui</label>
+                    <input type="radio" id="ferme-porte-1" name="Ferme porte" value="Oui">
+                    <label for="ferme-porte-2">Non</label>
+                    <input type="radio" id="ferme-porte-2" name="Ferme porte" value="Non">
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <label>Barre de condamnation : </label>
+                    <label for="barre-1">Oui</label>
+                    <input type="radio" id="barre-1" name="Barre de condamnation" value="Oui">
+                    <label for="barre-2">Non</label>
+                    <input type="radio" id="barre-2" name="Barre de condamnation" value="Non">
+                </td>
+            </tr>
+            <tr> 
+                <td colspan="4" style="text-align: center;">
+                    <label for="observations">Autres / Observations :</label><br />
+                    <textarea id="observations" name="Autres/observations" rows="10" cols="100"></textarea><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <input type="hidden" name="_captcha" value="false" />
+                    <button type="submit">Envoyer</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nombreVantaux = document.getElementById("nombre-vantaux");
+            const inegauxRow = document.getElementById("inegaux");
+            const vantailImage = document.getElementById("vantail");
+            const vantauxImage = document.getElementById("vantaux");
+            const vantail1 = document.getElementById("vantail-1");
+            const vantail2 = document.getElementById("vantail-2");
+
+            nombreVantaux.addEventListener("change", function () {
+                if (this.value === "2") {
+                    inegauxRow.style.display = "table-row";
+                    vantauxImage.style.display = "table-cell";
+                    vantailImage.style.display = "none";
+                    vantail1.style.display = "none";
+                    vantail2.style.display = "table-cell";
+                } else {
+                    inegauxRow.style.display = "none";
+                    vantauxImage.style.display = "none";
+                    vantailImage.style.display = "table-cell";
+                    vantail1.style.display = "table-cell";
+                    vantail2.style.display = "none";
+                }
+            });
+               
+        });
+    </script>
+</body>
+</html>
